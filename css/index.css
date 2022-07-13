@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap");
+:root {
+  --first-color: hsl(217, 75%, 80%);
+  --body-color: hsl(211, 100%, 95%);
+  --body-font: "Montserrat Alternates", sans-serif;
+  --normal-font-size: 1.6rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+.button {
+  background-color: var(--first-color);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 20px 56px;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s;
+}
+.button .button_text {
+  position: relative;
+  z-index: 10;
+}
+.button img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.button .button_cone {
+  width: 30px;
+  transform: translate(0px, 0px) rotate(90deg);
+}
+.button .button_torus {
+  width: 50px;
+  transform: translate(0px, 0px) rotate(90deg);
+}
+.button .button_ico {
+  width: 50px;
+  transform: translate(60px, 0px) rotate(-30deg);
+}
+.button .button_sphere {
+  width: 30px;
+  transform: translate(-10px, 20px) rotate(30deg);
+}
+.button:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 6px 18px 10px rgba(168, 198, 245, 0.59);
+}
+.button:hover img {
+  opacity: 1;
+}
+.button:hover .button_cone {
+  transform: translate(-60px, -10px) rotate(-5deg) scale(1.3);
+  filter: blur(0.6px);
+}
+.button:hover .button_torus {
+  transform: translate(10px, -40px) rotate(-5deg) scale(1.2);
+}
+.button:hover .button_ico {
+  transform: translate(78px, -24px) rotate(-5deg);
+  filter: blur(0.6px);
+}
+.button:hover .button_sphere {
+  transform: translate(-22px, 30px) rotate(-5deg) scale(1.8);
+}
+
+/*# sourceMappingURL=index.css.map */
